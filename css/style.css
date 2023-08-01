@@ -41,8 +41,10 @@ p {
 .container {
     margin: 0 auto;
     /* centralizar a div header */
-    width: 1120px;
-    /* largura do header - logo + links */
+    max-width: 1120px;
+    /* largura do header - logo + links - max-width pensando no responsivo*/
+    padding-right: 15px;
+    padding-left: 15px;
 
 }
 
@@ -269,4 +271,45 @@ h4 {
 
 .footer p {
     line-height: 130%;
+}
+
+/* Uma condição para telas até 1279px */
+@media (max-width: 1279px){
+    
+    .menu{
+        display: none;
+        /* Não tem menu no site em telas até 1279px */
+    }
+
+    .bar{
+        width: 40px;
+        height: 3px;
+        background-color: #ffffff;
+        margin-bottom: 3px;
+    }
+
+    h1{
+        font-size: 32px;
+        line-height: 36px;
+        text-align: center;
+        max-width: 384px;
+    }
+
+    p {
+        line-height: 24px;
+        text-align: center;
+    }
+
+    .hero-section{
+       flex-direction: column;
+        text-align: center;
+    }
+
+    .content-hero .btn-section{
+        margin: 0 auto;
+    }
+
+    .content-hero p{
+        max-width: 384px;
+    }
 }
